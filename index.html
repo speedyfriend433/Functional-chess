@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Chess Game</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.css">
+    <!-- Chessboard.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css">
     <style>
+        /* Additional styling */
         #myBoard {
             width: 500px;
             margin: 20px auto;
         }
-        #status {
+        #status, #moveHistory {
             text-align: center;
             margin-top: 10px;
             font-size: 18px;
+        }
+        /* Responsive chessboard */
+        @media (max-width: 600px) {
+            #myBoard {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -22,8 +30,11 @@
     <div id="status"></div>
     <div id="moveHistory"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0-beta.0/chess.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.js"></script>
+    <!-- Chess.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.0/chess.min.js"></script>
+    <!-- Chessboard.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+    <!-- Your custom script -->
     <script src="script.js"></script>
 
 </body>
