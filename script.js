@@ -52,7 +52,10 @@ function updateStatus() {
             status += ', ' + moveColor + ' is in check.';
         }
     }
-
+    var history = game.history();
+    var historyElement = document.getElementById('moveHistory');
+    historyElement.innerHTML = history.join(' ');
+}
     document.getElementById('status').innerHTML = status;
 }
 
